@@ -4,6 +4,8 @@
  */
 package com.viacaoCalango.models;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Lucas
@@ -14,13 +16,14 @@ public class Onibus {
     private String modelo;
     private String placa;
     private int qntAssentos;
-    private String tipoOnibus;
+    private String tipoAssento;
+    private HashSet<String> paradas = new HashSet<String>();
 
-    public Onibus(String modelo, String placa, int qntAssentos, String tipoOnibus) {
+    public Onibus(String modelo, String placa, int qntAssentos, String tipoAssento) {
         this.modelo = modelo;
         this.placa = placa;
         this.qntAssentos = qntAssentos;
-        this.tipoOnibus = tipoOnibus;
+        this.tipoAssento = tipoAssento;
     }
    
 
@@ -48,12 +51,12 @@ public class Onibus {
         this.qntAssentos = qntAssentos;
     }
 
-    public String getTipoOnibus() {
-        return tipoOnibus;
+    public String getTipoAssento() {
+        return tipoAssento;
     }
 
-    public void setTipoOnibus(String tipoOnibus) {
-        this.tipoOnibus = tipoOnibus;
+    public void setTipoAssento(String tipoOnibus) {
+        this.tipoAssento = tipoOnibus;
     }
 
     

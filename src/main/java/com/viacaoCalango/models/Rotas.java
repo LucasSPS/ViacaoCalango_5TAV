@@ -16,14 +16,14 @@ public class Rotas {
     private String localPartida;
     private String localDestino;
     private int qntParadas;
-    //private LinkedList<String> paradas = new LinkedList();
     private HashSet<String> paradas = new HashSet<String>();
-    //private 
+    private double preço;
 
-    public Rotas(String _localPartida, String _localDestino, String... _parada) {
+    public Rotas(String _localPartida, String _localDestino, double _preço, String... _parada) {
         localPartida = _localPartida;
         localDestino = _localDestino;
         qntParadas = _parada.length;
+        preço = _preço;
 
         for (int i = 0; i < qntParadas; i++) {
             paradas.add(_parada[i]);
@@ -77,6 +77,14 @@ public class Rotas {
 
     public void setParadas(HashSet<String> paradas) {
         this.paradas = paradas;
+    }
+
+    public double getPreço() {
+        return preço;
+    }
+
+    public void setPreço(double preço) {
+        this.preço = preço;
     }
     
     
